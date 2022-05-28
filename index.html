@@ -1,36 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+  <meta charset="utf-8">
+  <title>Текст</title> 
+  <style>
+   H3 { 
+    font-size: 120%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #333366; 
+   }
+   
+  form {
+  background-color:#FF8C00; 
+  max-width: 400px; /* Максимальная ширина страницы в пикселах */
+  }
+  
+  fieldset {color:#000}
+  
+  label 
+  {color:#000; font-weight:bold}
+
+  input 
+  {color:#022; font-weight:bold}
+
+  </style>
+  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Form</title>
+
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="header">Форма для бота</h1>
+	<form action="#" method="post" id="sendform" enctype="multipart/form-data">
+	  <fieldset>
+		<h3>Форма обратной связи</h3>
+		
+		<p>
+		  <label>Тема:</label>
+		  <input name="name" value="" size="40" type="text" class="required" />
+		</p>
 
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Выберите отдел</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Отдел 1</a>
-              <a href="#">Отдел 2</a>
-              <a href="#">Отдел 3</a>
-              <a href="#">Отдел 4</a>
-              <a href="#">Отдел 5</a>
-              <a href="#">Отдел 6</a>
-            </div>
-          </div>
+		<p>
+		  <p><label>Текст Сообщения:</label></p>
+		  <textarea name="message" cols="45" rows="10" /> </textarea>
+		</p>
 
-        <form class="feed-form" action="#">
-            <input name="name" required placeholder="Введите текст" type="text">
-            
-            <button class="button button_submit">Отправить</button>
-            
-        </form>
-    </div>
+		<p>
+		  <p><label>Прикрепить файл:</label></p>
+		  <input name="file" value="1" size="40" type="file" />
+		</p>
+		
+		<input value="Отправить" name="sendMail" type="submit" />
 
-    <script src="js/script.js"></script>
+	  </fieldset>
+	</form>
 </body>
 </html>
